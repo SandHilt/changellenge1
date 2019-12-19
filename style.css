@@ -1,5 +1,5 @@
-#app .bg-primario {
-	background-color: #275894;
+#app .bg-primary {
+	background-color: #275894 !important;
 }
 
 #navegacao .nav-link {
