@@ -18,38 +18,66 @@
 	</head>
 
 	<body>
-		<nav id="navegacao">
-			<ul class="nav flex-column bg-primary">
-				<li class="nav-item">
-					<a href="#" class="nav-link">Dashboard</a>
-				</li>
-				<li class="nav-item">
-					<a href="#" class="nav-link active">Eventos</a>
-				</li>
-				<li class="nav-item">
-					<a href="#" class="nav-link">Notificações</a>
-				</li>
-				<li class="nav-item">
-					<a href="#" class="nav-link">Usuários</a>
-				</li>
-				<li class="nav-item">
-					<a href="#" class="nav-link">Logout</a>
-				</li>
-			</ul>
-		</nav>
-		<main>
-			<header>
-				<h4>Eventos</h4>
-			</header>
-			<section>
-				<header>
-					<form action="#" method="GET">
-						<input type="search" name="procurar" id="procurar" />
-						<button type="submit"></button>
-					</form>
-				</header>
-			</section>
-		</main>
+		<div id="app" class="container-fluid">
+			<div class="row">
+				<nav id="navegacao">
+					<ul class="nav flex-column bg-primario shadow">
+						<li class="nav-item">
+							<a href="#" class="nav-link">Dashboard</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link active">Eventos</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link">Notificações</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link">Usuários</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link">Logout</a>
+						</li>
+					</ul>
+				</nav>
+				<main class="col pt-4">
+					<header class="mb-4">
+						<h4>Eventos</h4>
+						<form action="#" method="GET">
+							<input type="search" name="procurar" id="procurar" />
+							<button id="create-event" class="btn btn-primary" type="submit">
+								Criar um novo evento
+							</button>
+						</form>
+					</header>
+					<section>
+						<table class="table">
+							<thead class="thead-light">
+								<tr>
+									<th scope="col">Nome</th>
+									<th scope="col">Data</th>
+									<th scope="col">Local</th>
+									<th scope="col">Ativo</th>
+									<th scope="col">Ações</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">Evento Olimpíadas</th>
+									<td>01/01/2020</td>
+									<td>Meier</td>
+									<td><p class="text-success">Sim</p></td>
+									<td>
+										<button>Ver</button>
+										<button>Editar</button>
+										<button>Excluir</button>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
+				</main>
+			</div>
+		</div>
 	</body>
 
 	<!-- Scripts -->
