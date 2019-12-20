@@ -1,86 +1,97 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
 
-		<!-- Estilos -->
-		<link
-			rel="stylesheet"
-			href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-			integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-			crossorigin="anonymous"
-		/>
-		<link rel="stylesheet" href="./style.css" />
+    <!-- Estilos -->
+    <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css"/>
 
-		<title>Painel de admin</title>
-	</head>
+    <title>Painel de admin</title>
+</head>
 
-	<body>
-		<div id="app" class="container-fluid">
-			<div class="row">
-				<nav id="navegacao">
-					<ul class="nav flex-column bg-primary shadow">
-						<li class="nav-item">
-							<a href="#" class="nav-link">Dashboard</a>
-						</li>
-						<li class="nav-item">
-							<a href="#" class="nav-link active">Eventos</a>
-						</li>
-						<li class="nav-item">
-							<a href="#" class="nav-link">Notificações</a>
-						</li>
-						<li class="nav-item">
-							<a href="#" class="nav-link">Usuários</a>
-						</li>
-						<li class="nav-item">
-							<a href="#" class="nav-link">Logout</a>
-						</li>
-					</ul>
-				</nav>
-				<main class="col pt-4">
-					<header class="mb-4">
-						<h4>Eventos</h4>
-						<form action="#" method="GET">
-							<input type="search" name="procurar" id="procurar" />
-							<button id="create-event" class="btn btn-primary" type="submit">
-								Criar um novo evento
-							</button>
-						</form>
-					</header>
-					<section>
-						<table class="table border">
-							<thead class="thead-light">
-								<tr>
-									<th scope="col">Nome</th>
-									<th scope="col">Data</th>
-									<th scope="col">Local</th>
-									<th scope="col">Ativo</th>
-									<th scope="col">Ações</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>Evento Olimpíadas</td>
-									<td>01/01/2020</td>
-									<td>Meier</td>
-									<td><p class="text-success">Sim</p></td>
-									<td>
-										<button>Ver</button>
-										<button>Editar</button>
-										<button>Excluir</button>
-									</td>
-								</tr>
-							</tbody>
-						</table>
-					</section>
-				</main>
-			</div>
-		</div>
-	</body>
+<body>
+<div id="app" class="container-fluid">
+    <div class="row align-content-stretch">
+        <nav id="navegacao" class="shadow bg-primary">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link active">Eventos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Notificações</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Usuários</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Logout</a>
+                </li>
+            </ul>
+        </nav>
+        <main class="col pt-4">
+            <header class="mb-4">
+                <h4>Eventos</h4>
+                <form class="form-row mb-4" action="#" method="GET">
+                    <div class="col-8 mb-2">
+                        <label class="sr-only" for="procurar">Procurar</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">🔍</div>
+                            </div>
+                            <input class="form-control" placeholder="Procurar"
+                                   type="search" name="procurar" id="procurar"/>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <button id="create-event" class="btn btn-primary btn-block" type="submit">
+                            Criar um novo evento
+                        </button>
+                    </div>
+                </form>
+            </header>
+            <section>
+                <table class="table border">
+                    <thead class="thead-light">
+                    <tr>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Data</th>
+                        <th scope="col">Local</th>
+                        <th scope="col">Ativo</th>
+                        <th scope="col">Ações</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Evento Olimpíadas</td>
+                        <td>01/01/2020</td>
+                        <td>Meier</td>
+                        <td><p class="text-success">Sim</p></td>
+                        <td>
+                            <button>Ver</button>
+                            <button>Editar</button>
+                            <button>Excluir</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+</div>
+</body>
 
-	<!-- Scripts -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="./script.js"></script>
+<!-- Scripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="./script.js"></script>
 </html>
