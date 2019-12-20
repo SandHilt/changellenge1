@@ -5,3 +5,7 @@
 #navegacao .nav-link {
 	color: #ffffff;
 }
+
+#navegacao .active {
+	color: #37cfe3;
+}
