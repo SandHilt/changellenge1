@@ -19,60 +19,68 @@
 
 <body>
 <div id="app" class="container-fluid">
-    <div class="row align-content-stretch">
+    <div class="row">
         <nav id="navegacao" class="shadow bg-primary">
             <ul class="nav flex-column">
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Dashboard</a>
+                    <a class="nav-link" href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link active">Eventos</a>
+                    <a class="nav-link active" href="#"><i class="far fa-calendar-check"></i> Eventos</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Notificações</a>
+                    <a class="nav-link" href="#"><i class="far fa-bell"></i> Notificações</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Usuários</a>
+                    <a class="nav-link" href="#"><i class="far fa-user"></i> Usuários</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Logout</a>
+                    <a class="nav-link" href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
                 </li>
             </ul>
         </nav>
-        <main class="col pt-4">
-            <header class="mb-4">
-                <h4>Eventos</h4>
-                <form class="form-row mb-4" action="#" method="GET">
+        <main class="col">
+            <header class="bg-white mb-4">
+                <h4>
+                    <i class="far fa-calendar-check"></i>
+                    Eventos</h4>
+            </header>
+            <section>
+                <form action="#" class="form-row mb-4" method="GET">
                     <div class="col-8 mb-2">
                         <label class="sr-only" for="procurar">Procurar</label>
                         <div class="input-group">
                             <div class="input-group-prepend">
-                                <div class="input-group-text">🔍</div>
+                                <div class="input-group-text bg-white">
+                                    <i class="text-muted fas fa-search"></i>
+                                </div>
                             </div>
-                            <input class="form-control" placeholder="Procurar"
-                                   type="search" name="procurar" id="procurar"/>
+                            <input class="form-control border-left-0"
+                                   id="procurar" name="procurar" type="search"/>
                         </div>
                     </div>
                     <div class="col">
-                        <button id="create-event" class="btn btn-primary btn-block" type="submit">
+                        <button class="btn btn-primary btn-block" id="create-event" type="submit">
                             Criar um novo evento
                         </button>
                     </div>
                 </form>
-            </header>
+            </section>
             <section>
-                <table class="table border">
-                    <thead class="thead-light">
-                    <tr>
-                        <th scope="col">Nome</th>
-                        <th scope="col">Data</th>
-                        <th scope="col">Local</th>
-                        <th scope="col">Ativo</th>
-                        <th scope="col">Ações</th>
-                    </tr>
-                    </thead>
-                    <tbody id="data"></tbody>
-                </table>
+                <div class="table-responsive">
+                    <table class="table table-app border border-app">
+                        <thead class="thead-app">
+                        <tr>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Data</th>
+                            <th scope="col">Local</th>
+                            <th scope="col">Ativo</th>
+                            <th scope="col">Ações</th>
+                        </tr>
+                        </thead>
+                        <tbody id="data"></tbody>
+                    </table>
+                </div>
             </section>
         </main>
     </div>
@@ -81,5 +89,7 @@
 
 <!-- Scripts -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.6/holder.min.js"></script>
+<script data-auto-replace-svg="nest" src="https://use.fontawesome.com/releases/v5.12.0/js/all.js"></script>
 <script src="./script.js"></script>
 </html>

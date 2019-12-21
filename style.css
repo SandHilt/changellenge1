@@ -1,11 +1,36 @@
+#app {
+    background-color: #e5e6eb;
+}
+
+#app .btn-primary,
 #app .bg-primary {
-	background-color: #275894 !important;
+    background-color: #275894 !important;
+}
+
+#app .text-primary {
+    color: #275894 !important;
+}
+
+#app .table-app {
+    /*max-width: 680px;*/
+    background-color: #ffffff;
+}
+
+#app .thead-app {
+    background-color: #f0f0f0;
+    color: #767780;
+}
+
+#app .border-app {
+    border-width: 2px !important;
+    border-color: #a7a7a7 !important;
 }
 
 #navegacao .nav-link {
-	color: #ffffff;
+    color: #ffffff;
 }
 
 #navegacao .active {
-	color: #37cfe3;
+    color: #37cfe3;
 }
+
