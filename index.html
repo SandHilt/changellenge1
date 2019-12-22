@@ -39,49 +39,79 @@
                 </li>
             </ul>
         </nav>
-        <main class="col">
-            <header class="bg-white mb-4">
-                <h4>
-                    <i class="far fa-calendar-check"></i>
-                    Eventos</h4>
-            </header>
-            <section>
-                <form action="#" class="form-row mb-4" method="GET">
-                    <div class="col-8 mb-2">
-                        <label class="sr-only" for="procurar">Procurar</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <div class="input-group-text bg-white">
-                                    <i class="text-muted fas fa-search"></i>
-                                </div>
-                            </div>
-                            <input class="form-control border-left-0"
-                                   id="procurar" name="procurar" type="search"/>
+        <main class="container col">
+            <div class="flex-column">
+                <header class="row navbar navbar-light bg-light">
+                    <div class="navbar-nav mr-auto">
+                        <div class="navbar-text d-flex align-items-center">
+                            <h1>
+                                <i class="text-secondary far fa-calendar-check mr-4"></i>
+                            </h1>
+                            <h4 class="text-primary font-weight-bold">
+                                Eventos
+                            </h4>
                         </div>
                     </div>
-                    <div class="col">
-                        <button class="btn btn-primary btn-block" id="create-event" type="submit">
-                            Criar um novo evento
-                        </button>
+                    <a class="navbar-brand">
+                        <img alt="" class="img-fluid"
+                             src="https://logodownload.org/wp-content/uploads/2018/08/governo-do-estado-rio-de-janeiro-logo.png"
+                             width="300">
+                    </a>
+                    <!--                    <div class="navbar-nav">-->
+                    <!--                        <form action="#" class="form-inline">-->
+                    <!--                            <label for="procurar" class="sr-only">Procurar</label>-->
+                    <!--                            <div class="input-group">-->
+                    <!--                                <div class="input-group-prepend">-->
+                    <!--                                    <div class="input-group-text bg-white">-->
+                    <!--                                        <i class="text-muted fas fa-search"></i>-->
+                    <!--                                    </div>-->
+                    <!--                                </div>-->
+                    <!--                                <input type="search" id="procurar" class="form-control border-left-0" name="procurar"/>-->
+                    <!--                            </div>-->
+                    <!--                        </form>-->
+                    <!--                    </div>-->
+                </header>
+                <section class="mt-4">
+                    <form action="#" class="form-row" method="GET">
+                        <div class="col-8 mb-2">
+                            <label class="sr-only" for="procurar">Procurar</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text bg-white">
+                                        <i class="text-muted fas fa-search"></i>
+                                    </div>
+                                </div>
+                                <input class="form-control border-left-0"
+                                       id="procurar" name="procurar" type="search"/>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <button class="btn btn-primary btn-block" id="create-event" type="submit">
+                                Criar um novo evento
+                            </button>
+                        </div>
+                    </form>
+                </section>
+                <section class="d-flex justify-content-center">
+                    <div class="spinner-border text-primary" id="loading" role="status">
+                        <span class="sr-only">Carregando...</span>
                     </div>
-                </form>
-            </section>
-            <section>
-                <div class="table-responsive">
-                    <table class="table table-app border border-app">
-                        <thead class="thead-app">
-                        <tr>
-                            <th scope="col">Nome</th>
-                            <th scope="col">Data</th>
-                            <th scope="col">Local</th>
-                            <th scope="col">Ativo</th>
-                            <th scope="col">Ações</th>
-                        </tr>
-                        </thead>
-                        <tbody id="data"></tbody>
-                    </table>
-                </div>
-            </section>
+                    <div class="table-responsive" id="table-event">
+                        <table class="table table-app border border-app">
+                            <thead class="thead-app">
+                            <tr>
+                                <th scope="col">Nome</th>
+                                <th scope="col">Data</th>
+                                <th scope="col">Local</th>
+                                <th scope="col">Ativo</th>
+                                <th scope="col">Ações</th>
+                            </tr>
+                            </thead>
+                            <tbody id="data"></tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
         </main>
     </div>
 </div>

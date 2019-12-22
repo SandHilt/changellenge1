@@ -1,4 +1,4 @@
-#app {
+body {
     background-color: #e5e6eb;
 }
 
@@ -30,7 +30,8 @@
     color: #ffffff;
 }
 
+#app .text-secondary,
 #navegacao .active {
-    color: #37cfe3;
+    color: #37cfe3 !important;
 }
 
