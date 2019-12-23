@@ -2,8 +2,10 @@ body {
     background-color: #e5e6eb;
 }
 
-#app .rounded-great {
-    border-radius: 15px;
+@media (min-width: 768px) {
+    #app .h-md-100 {
+        height: 100%;
+    }
 }
 
 #app .btn-primary,
@@ -29,14 +31,36 @@ body {
     border-color: #a7a7a7 !important;
 }
 
+#navegacao {
+    z-index: 1021;
+    box-shadow: 2px 2px 20px #333333;
+}
+
+/**
+Pode ser substituido por
+.text-light
+.text-left
+ */
 #navegacao .nav-link {
     color: #ffffff;
+    text-align: left;
 }
 
 #app .text-secondary,
+#navegacao .icon,
 #navegacao .active,
 #navegacao .nav-link:hover,
 #navegacao .nav-link:focus {
     color: #37cfe3 !important;
+}
+
+@media (min-width: 768px) {
+    #navegacao {
+        max-width: 300px;
+    }
+}
+
+#app main {
+    max-width: 1280px;
 }
 
