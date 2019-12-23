@@ -18,24 +18,24 @@
 </head>
 
 <body>
-<div id="app" class="container-fluid">
-    <div class="row">
-        <nav id="navegacao" class="shadow bg-primary">
-            <ul class="nav flex-column">
+<div class="container-fluid h-100 position-absolute" id="app">
+    <div class="row h-100">
+        <nav class="col-md-2 shadow bg-primary" id="navegacao">
+            <ul class="nav flex-column h-100">
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                    <a class="nav-link" href="#"><i class="text-secondary fas fa-tachometer-alt"></i> Dashboard</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="#"><i class="far fa-calendar-check"></i> Eventos</a>
+                    <a class="nav-link active" href="#"><i class="text-secondary far fa-calendar-check"></i> Eventos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="far fa-bell"></i> Notificações</a>
+                    <a class="nav-link" href="#"><i class="text-secondary far fa-bell"></i> Notificações</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="far fa-user"></i> Usuários</a>
+                    <a class="nav-link" href="#"><i class="text-secondary far fa-user"></i> Usuários</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                    <a class="nav-link" href="#"><i class="text-secondary fas fa-sign-out-alt"></i> Logout</a>
                 </li>
             </ul>
         </nav>
@@ -57,25 +57,12 @@
                              src="https://logodownload.org/wp-content/uploads/2018/08/governo-do-estado-rio-de-janeiro-logo.png"
                              width="300">
                     </a>
-                    <!--                    <div class="navbar-nav">-->
-                    <!--                        <form action="#" class="form-inline">-->
-                    <!--                            <label for="procurar" class="sr-only">Procurar</label>-->
-                    <!--                            <div class="input-group">-->
-                    <!--                                <div class="input-group-prepend">-->
-                    <!--                                    <div class="input-group-text bg-white">-->
-                    <!--                                        <i class="text-muted fas fa-search"></i>-->
-                    <!--                                    </div>-->
-                    <!--                                </div>-->
-                    <!--                                <input type="search" id="procurar" class="form-control border-left-0" name="procurar"/>-->
-                    <!--                            </div>-->
-                    <!--                        </form>-->
-                    <!--                    </div>-->
                 </header>
                 <section class="mt-4">
                     <form action="#" class="form-row" method="GET">
-                        <div class="col-8 mb-2">
+                        <div class="col-md-8 mb-2">
                             <label class="sr-only" for="procurar">Procurar</label>
-                            <div class="input-group">
+                            <div class="input-group input-group-lg rounded rounded-great">
                                 <div class="input-group-prepend">
                                     <div class="input-group-text bg-white">
                                         <i class="text-muted fas fa-search"></i>
@@ -86,13 +73,14 @@
                             </div>
                         </div>
                         <div class="col">
-                            <button class="btn btn-primary btn-block" id="create-event" type="submit">
-                                Criar um novo evento
+                            <button class="btn btn-block btn-lg btn-primary" id="create-event" type="submit">
+                                <i class="fas fa-plus-circle mr-2"></i>
+                                Criar novo evento
                             </button>
                         </div>
                     </form>
                 </section>
-                <section class="d-flex justify-content-center">
+                <section class="mt-4 d-flex justify-content-center">
                     <div class="spinner-border text-primary" id="loading" role="status">
                         <span class="sr-only">Carregando...</span>
                     </div>

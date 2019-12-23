@@ -2,6 +2,10 @@ body {
     background-color: #e5e6eb;
 }
 
+#app .rounded-great {
+    border-radius: 15px;
+}
+
 #app .btn-primary,
 #app .bg-primary {
     background-color: #275894 !important;
@@ -12,7 +16,6 @@ body {
 }
 
 #app .table-app {
-    /*max-width: 680px;*/
     background-color: #ffffff;
 }
 
@@ -26,12 +29,14 @@ body {
     border-color: #a7a7a7 !important;
 }
 
-#navegacao .nav-link {
+#navegacao a {
     color: #ffffff;
 }
 
 #app .text-secondary,
-#navegacao .active {
+#navegacao .active,
+#navegacao a:hover,
+#navegacao a:focus {
     color: #37cfe3 !important;
 }
 

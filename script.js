@@ -2,11 +2,6 @@ $('#create-event').on('click', function () {
     alert('criando evento');
 });
 
-
-// setTimeout(function () {
-//     alert('alert');
-// }, 1000);
-
 $("#table-event").hide();
 
 $.getJSON('./data.json', function (data) {
@@ -43,12 +38,11 @@ $.getJSON('./data.json', function (data) {
             );
 
             items.push("<tr>" + item.join() + "</tr>");
-            // $("#table-app").fadeIn('slow', function () {
-            //     $("<tr/>", {html: item.join("")}).append("#data");
-            // });
         }
     );
-    // $("#loading").fadeOut(3000, function () {
-    //     $("#table-app").show();
-    // });
+
+    $("#loading").fadeOut(3000, function () {
+        $("#data").append(items.join(""));
+        $("#table-event").fadeIn(1000);
+    });
 });
