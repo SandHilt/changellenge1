@@ -29,14 +29,14 @@ body {
     border-color: #a7a7a7 !important;
 }
 
-#navegacao a {
+#navegacao .nav-link {
     color: #ffffff;
 }
 
 #app .text-secondary,
 #navegacao .active,
-#navegacao a:hover,
-#navegacao a:focus {
+#navegacao .nav-link:hover,
+#navegacao .nav-link:focus {
     color: #37cfe3 !important;
 }
 
